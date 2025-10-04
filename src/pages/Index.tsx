@@ -2,8 +2,8 @@ import { GrainGradient } from '@paper-design/shaders-react';
 
 const Index = () => {
   return (
-    <div className="h-screen p-5 flex items-center justify-center">
-      <div className="w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-8">
+    <div className="min-h-screen p-5 flex md:items-center md:justify-center">
+      <div className="w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-6 md:gap-8">
         {/* Text Section */}
         <div className="flex flex-col justify-between w-full md:w-[303px] md:flex-shrink-0 md:h-full">
           <div className="flex flex-col gap-4">
