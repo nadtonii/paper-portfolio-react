@@ -1,8 +1,15 @@
 import { GrainGradient } from '@paper-design/shaders-react';
+import { useState, useEffect } from 'react';
 
 const Index = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
-    <div className="h-screen p-5 flex items-center justify-center">
+    <div className={`h-screen p-5 flex items-center justify-center transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
       <div className="w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-8">
         {/* Text Section */}
         <div className="flex flex-col justify-between w-full md:w-[303px] md:flex-shrink-0 md:h-full pb-20 md:pb-0">
