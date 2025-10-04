@@ -2,22 +2,22 @@ import { GrainGradient } from '@paper-design/shaders-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 md:p-8">
-      <div className="w-full max-w-7xl flex flex-col-reverse md:flex-row items-center gap-8 md:gap-8">
+    <div className="min-h-screen flex items-center justify-center p-5">
+      <div className="w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-8">
         {/* Text Section */}
-        <div className="flex flex-col gap-16 w-full md:w-auto md:flex-shrink-0" style={{ width: 'auto', maxWidth: '303px' }}>
+        <div className="flex flex-col justify-between w-full md:w-[303px] md:flex-shrink-0">
           <div className="flex flex-col gap-4">
             <div className="font-noto font-semibold text-base leading-[150%] tracking-[-0.015em] whitespace-pre-wrap text-portfolio-text">
               {'Toni Nađ,\nProduct Designer'}
             </div>
           </div>
-          <div className="font-noto font-normal text-base leading-[150%] tracking-[-0.015em] whitespace-pre-wrap text-portfolio-text">
+          <div className="font-noto font-normal text-base leading-[150%] tracking-[-0.015em] whitespace-pre-wrap text-portfolio-text mt-16 md:mt-0">
             {'Currently working at Porsche Digital,\ndesigning user-centered experiences for Porsche drivers.'}
           </div>
         </div>
 
         {/* Animation Section */}
-        <div className="relative w-full md:flex-1 h-[400px] md:h-[600px] rounded-[32px] overflow-hidden">
+        <div className="relative w-full md:flex-1 h-[500px] md:h-auto min-h-[500px] rounded-[32px] overflow-hidden">
           <GrainGradient
             colors={['#FFEFDF', '#EB885D', '#FFAD8A']}
             colorBack="#00000000"
