@@ -1,9 +1,19 @@
 import { GrainGradient } from '@paper-design/shaders-react';
+import { useState, useEffect } from 'react';
 
 const Index = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="h-screen p-5 flex items-center justify-center">
-      <div className="w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-8">
+    <div className="h-screen p-5 flex items-center justify-center relative overflow-hidden">
+      <div className={`w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-8 transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
         {/* Text Section */}
         <div className="flex flex-col justify-between w-full md:w-[303px] md:flex-shrink-0 md:h-full pb-20 md:pb-0">
           <div className="flex flex-col gap-4">
@@ -17,7 +27,11 @@ const Index = () => {
         </div>
 
         {/* Animation Section */}
-        <div className="relative w-full md:flex-1 h-[500px] md:h-full rounded-[32px] overflow-hidden">
+        <div className={`relative w-full md:flex-1 h-[500px] md:h-full rounded-[32px] overflow-hidden transition-all duration-1000 ease-out ${
+          isLoaded 
+            ? 'static' 
+            : 'fixed inset-0 !w-screen !h-screen !rounded-none z-50'
+        }`}>
           <GrainGradient
             colors={['#FFEFDF', '#EB885D', '#FFAD8A']}
             colorBack="#00000000"
