@@ -1,22 +1,6 @@
 import { GrainGradient } from '@paper-design/shaders-react';
-import { useState, useEffect } from 'react';
 
 const Index = () => {
-  const texts = ['Keep thinking.', 'Keep imagining.', 'Design for humans.'];
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentIndex((prev) => (prev + 1) % texts.length);
-        setIsTransitioning(false);
-      }, 500);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
   return (
     <div className="h-screen p-5 flex items-center justify-center">
       <div className="w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-8">
@@ -57,12 +41,8 @@ const Index = () => {
               left: 0,
             }}
           />
-          <div 
-            className={`absolute inset-0 flex items-center justify-center font-baskerville text-2xl leading-[150%] text-portfolio-gradient-text text-center whitespace-pre transition-all duration-500 ${
-              isTransitioning ? 'blur-md opacity-0' : 'blur-none opacity-100'
-            }`}
-          >
-            {texts[currentIndex]}
+          <div className="absolute inset-0 flex items-center justify-center font-baskerville text-2xl leading-[150%] text-portfolio-gradient-text text-center whitespace-pre">
+            Keep thinking.
           </div>
         </div>
       </div>
