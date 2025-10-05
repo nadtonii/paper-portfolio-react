@@ -3,27 +3,11 @@ import { useState, useEffect } from 'react';
 
 const Index = () => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  
-  const words = ['thinking.', 'creating.', 'dreaming.'];
 
   useEffect(() => {
     // Small delay to ensure WebKit properly renders the gradient before fading in
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentWordIndex((prev) => (prev + 1) % words.length);
-        setIsTransitioning(false);
-      }, 400);
-    }, 3000);
-
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -67,16 +51,7 @@ const Index = () => {
             }}
           />
           <div className="absolute inset-0 flex items-center justify-center font-baskerville text-2xl leading-[150%] text-portfolio-gradient-text text-center whitespace-pre">
-            <span>
-              Keep{' '}
-              <span 
-                className={`inline-block transition-all duration-400 ${
-                  isTransitioning ? 'opacity-0 blur-sm' : 'opacity-100 blur-0'
-                }`}
-              >
-                {words[currentWordIndex]}
-              </span>
-            </span>
+            Keep thinking.
           </div>
         </div>
       </div>
