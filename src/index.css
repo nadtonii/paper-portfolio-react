@@ -6,11 +6,11 @@
 
 @layer base {
   :root {
-    --background: 30 33% 96%;
-    --foreground: 0 0% 0%;
-    --portfolio-bg: 30 33% 96%;
-    --portfolio-text: 0 0% 0%;
-    --portfolio-gradient-text: 30 95% 13%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --portfolio-bg: 0 0% 0%;
+    --portfolio-text: 0 0% 100%;
+    --portfolio-gradient-text: 0 0% 100%;
   }
 }
 
