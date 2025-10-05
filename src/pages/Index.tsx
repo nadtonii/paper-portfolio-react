@@ -35,13 +35,13 @@ const Index = () => {
             rotation={119}
             offsetX={0}
             offsetY={0.46}
-            softness={1}
+            softness={0.02}
             intensity={1}
-            noise={0}
+            noise={0.25}
             shape="blob"
-            frame={5833826.233997925}
+            frame={2618843.2340003327}
             style={{
-              backgroundColor: '#171717',
+              backgroundColor: '#F6F2EB',
               borderRadius: '32px',
               height: '100%',
               width: '100%',
