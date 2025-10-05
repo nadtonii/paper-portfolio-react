@@ -20,7 +20,7 @@ const Index = () => {
               {'Toni Nađ\nProduct Designer'}
             </div>
           </div>
-          <div className="font-noto font-normal text-base leading-[150%] tracking-[-0.015em] whitespace-pre-wrap text-portfolio-text mt-16 md:mt-0">
+          <div className="font-noto font-normal text-base leading-[150%] tracking-[-0.015em] whitespace-pre-wrap text-portfolio-text mt-2 md:mt-0">
             {'Currently working at Porsche Digital,\ndesigning user-centered experiences.'}
           </div>
         </div>
