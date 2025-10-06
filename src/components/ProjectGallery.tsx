@@ -1,6 +1,6 @@
 const ProjectGallery = () => {
   return (
-    <div className="w-full max-w-[1440px] mx-auto flex flex-col gap-4 p-5">
+    <div className="w-full max-w-[1440px] mx-auto flex flex-col gap-4 p-4">
       {/* Row 1: Two card groups with phone screenshots */}
       <div className="flex flex-col md:flex-row gap-4 h-auto md:h-[478px]">
         <div className="flex-1 bg-[#F9F9F9] rounded-[32px] flex items-center justify-center gap-4 p-4 h-[400px] md:h-auto">

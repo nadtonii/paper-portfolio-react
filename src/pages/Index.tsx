@@ -13,7 +13,7 @@ const Index = () => {
 
   return (
     <>
-      <div className={`h-screen p-5 flex items-center justify-center transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+      <div className={`h-screen p-4 flex items-center justify-center transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <div className="w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-8">
           {/* Text Section */}
           <div className="flex flex-col justify-between w-full md:w-[303px] md:flex-shrink-0 md:h-full pb-20 md:pb-0">
