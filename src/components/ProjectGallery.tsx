@@ -55,21 +55,6 @@ const ProjectGallery = () => {
         </div>
       </div>
 
-      {/* Row 3: Two wide screenshots */}
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="flex-1 bg-[#F9F9F9] rounded-[32px] flex items-center justify-center p-4 h-[400px] md:h-[478px]">
-          <div 
-            className="w-full max-w-[524px] h-[355px] rounded-[24px] bg-cover bg-center bg-no-repeat flex-shrink-0"
-            style={{ backgroundImage: 'url("https://workers.paper.design/file-assets/01K6TRN5ZA81ESKVPPADQ4AE03/01K6X463AMYB1262MEE74ZSX6E.png")' }}
-          />
-        </div>
-        <div className="w-full md:w-[696px] bg-[#F9F9F9] rounded-[32px] flex items-center justify-center p-4 h-[400px] md:h-[478px]">
-          <div 
-            className="w-full max-w-[524px] h-[355px] rounded-[24px] bg-cover bg-center bg-no-repeat flex-shrink-0"
-            style={{ backgroundImage: 'url("https://workers.paper.design/file-assets/01K6TRN5ZA81ESKVPPADQ4AE03/01K6X4998H554SMYRHR42PQBPG.png")' }}
-          />
-        </div>
-      </div>
     </div>
   );
 };
