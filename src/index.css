@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Libre+Baskerville:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,24 +6,34 @@
 
 @layer base {
   :root {
-    --background: 30 33% 96%;
+    --background: 0 0% 100%;
     --foreground: 0 0% 0%;
-    --portfolio-bg: 30 33% 96%;
-    --portfolio-text: 0 0% 0%;
-    --portfolio-gradient-text: 30 95% 13%;
   }
 }
 
 @layer base {
+  html {
+    height: -webkit-fill-available;
+  }
+
   body {
-    @apply bg-portfolio-bg text-portfolio-text;
-    font-family: 'Noto Serif JP', system-ui, sans-serif;
+    align-items: center;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    font-family: 'Inter', system-ui, sans-serif;
+    justify-content: center;
+    margin: 0;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
   }
-  
-  html {
-    height: -webkit-fill-available;
+
+  #root {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100dvh;
+    width: 100%;
   }
 }

@@ -1,62 +1,113 @@
-import { GrainGradient } from '@paper-design/shaders-react';
-import { useState, useEffect } from 'react';
+import { Dithering } from '@paper-design/shaders-react';
 
-const Index = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Small delay to ensure WebKit properly renders the gradient before fading in
-    const timer = setTimeout(() => setIsLoaded(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
+/**
+ * Code exported from Paper
+ * https://app.paper.design/file/01K6QTKWX52CKA6TD44KQT0HN3?node=01K77CYFG1V46P2QBY7416EKDR
+ * on Oct 10, 2025 at 5:48 PM.
+ */
+export default function Frame() {
   return (
-    <div className={`h-screen p-5 flex items-center justify-center transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-      <div className="w-full h-full flex flex-col-reverse md:flex-row items-stretch gap-8">
-        {/* Text Section */}
-        <div className="flex flex-col justify-between w-full md:w-[303px] md:flex-shrink-0 md:h-full pb-20 md:pb-0">
-          <div className="flex flex-col gap-4">
-            <div className="font-noto font-semibold text-base leading-[150%] tracking-[-0.015em] whitespace-pre-wrap text-portfolio-text">
-              {'Toni Nađ\nProduct Designer'}
-            </div>
-          </div>
-          <div className="font-noto font-normal text-base leading-[150%] tracking-[-0.015em] whitespace-pre-wrap text-portfolio-text mt-2 md:mt-0">
-            {'Currently working at Porsche Digital,\ndesigning user-centered experiences.'}
-          </div>
+    <div
+      style={{
+        alignItems: 'center',
+        alignSelf: 'stretch',
+        boxSizing: 'border-box',
+        contain: 'layout',
+        display: 'flex',
+        flex: '1 0 0px',
+        flexBasis: '0px',
+        flexDirection: 'row',
+        flexGrow: '1',
+        flexShrink: '0',
+        gap: 10,
+        height: 'auto',
+        justifyContent: 'center',
+        overflowWrap: 'break-word',
+        paddingBlock: 0,
+        paddingInline: 0,
+        transformOrigin: '50% 50%',
+        width: 'auto',
+      }}
+    >
+      <Dithering
+        colorBack="#00000000"
+        colorFront="#FFFFFF"
+        speed={2}
+        shape="sphere"
+        type="8x8"
+        size={0.1}
+        scale={0.6}
+        frame={2116942.615999751}
+        style={{
+          backgroundColor: '#FD4330',
+          borderRadius: '12px',
+          boxShadow: '#FF000530 0px 0px 12px 2px',
+          flexShrink: '0',
+          height: '56px',
+          width: '56px',
+        }}
+      />
+      <div
+        style={{
+          alignItems: 'start',
+          boxSizing: 'border-box',
+          contain: 'layout',
+          display: 'flex',
+          flexDirection: 'column',
+          flexShrink: '0',
+          height: 'fit-content',
+          justifyContent: 'center',
+          overflowWrap: 'break-word',
+          paddingBlock: 0,
+          paddingInline: 0,
+          transformOrigin: '50% 50%',
+          width: 'fit-content',
+        }}
+      >
+        <div
+          style={{
+            boxSizing: 'border-box',
+            color: '#000000',
+            flexShrink: '0',
+            fontFamily: '"Inter", system-ui, sans-serif',
+            fontSize: '24px',
+            fontSynthesis: 'none',
+            fontWeight: 600,
+            height: 'fit-content',
+            letterSpacing: '-0.012em',
+            lineHeight: '120%',
+            MozOsxFontSmoothing: 'grayscale',
+            transformOrigin: '50% 50%',
+            WebkitFontSmoothing: 'antialiased',
+            whiteSpace: 'pre',
+            width: 'fit-content',
+          }}
+        >
+          Toni
         </div>
-
-        {/* Animation Section */}
-        <div className="relative w-full md:flex-1 h-[500px] md:h-full rounded-[32px] overflow-hidden">
-          <GrainGradient
-            colors={['#FFEFDF', '#EB885D', '#FFAD8A']}
-            colorBack="#00000000"
-            speed={2}
-            scale={1.54}
-            rotation={119}
-            offsetX={0}
-            offsetY={0.46}
-            softness={0.02}
-            intensity={1}
-            noise={0.25}
-            shape="blob"
-            frame={2618843.2340003327}
-            style={{
-              backgroundColor: '#F6F2EB',
-              borderRadius: '32px',
-              height: '100%',
-              width: '100%',
-              position: 'absolute',
-              top: 0,
-              left: 0,
-            }}
-          />
-          <div className="absolute inset-0 flex items-center justify-center font-baskerville text-2xl leading-[150%] text-portfolio-gradient-text text-center whitespace-pre">
-            Keep thinking.
-          </div>
+        <div
+          style={{
+            alignSelf: 'stretch',
+            boxSizing: 'border-box',
+            color: '#000000',
+            flexShrink: '0',
+            fontFamily: '"Inter", system-ui, sans-serif',
+            fontSize: '16px',
+            fontSynthesis: 'none',
+            fontWeight: 400,
+            height: 'fit-content',
+            letterSpacing: '-0.012em',
+            lineHeight: '120%',
+            MozOsxFontSmoothing: 'grayscale',
+            transformOrigin: '50% 50%',
+            WebkitFontSmoothing: 'antialiased',
+            whiteSpace: 'pre-wrap',
+            width: 'auto',
+          }}
+        >
+          Product designer
         </div>
       </div>
     </div>
   );
-};
-
-export default Index;
+}
