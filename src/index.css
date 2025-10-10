@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Libre+Baskerville:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,23 +6,21 @@
 
 @layer base {
   :root {
-    --background: 30 33% 96%;
+    --background: 0 0% 100%;
     --foreground: 0 0% 0%;
-    --portfolio-bg: 30 33% 96%;
-    --portfolio-text: 0 0% 0%;
-    --portfolio-gradient-text: 30 95% 13%;
   }
 }
 
 @layer base {
   body {
-    @apply bg-portfolio-bg text-portfolio-text;
-    font-family: 'Noto Serif JP', system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Quicksand', system-ui, sans-serif;
     min-height: 100vh;
     min-height: -webkit-fill-available;
     padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
   }
-  
+
   html {
     height: -webkit-fill-available;
   }
