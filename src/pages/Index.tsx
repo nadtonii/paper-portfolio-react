@@ -11,6 +11,7 @@ export default function Frame() {
       style={{
         alignItems: 'center',
         alignSelf: 'stretch',
+        backgroundColor: '#FFFFFF',
         boxSizing: 'border-box',
         contain: 'layout',
         display: 'flex',
@@ -22,11 +23,13 @@ export default function Frame() {
         gap: 10,
         height: 'auto',
         justifyContent: 'center',
+        margin: 0,
+        minHeight: '100dvh',
         overflowWrap: 'break-word',
         paddingBlock: 0,
         paddingInline: 0,
         transformOrigin: '50% 50%',
-        width: 'auto',
+        width: '100%',
       }}
     >
       <Dithering
